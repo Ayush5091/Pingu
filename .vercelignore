@@ -6,14 +6,14 @@
 *.pem
 *.key
 
-# Not part of the web app
-spark_flutter/
-rag/
-*.png
-!public/**
+# Not part of the web app. Leading "/" anchors to the project root:
+# a bare "rag/" would also drop src/app/api/rag and src/lib/rag.
+/spark_flutter/
+/rag/
+/SPARK.png
 
 # Local build output and tooling
-.next/
-node_modules/
+/.next/
+/node_modules/
 *.tsbuildinfo
 *.log
