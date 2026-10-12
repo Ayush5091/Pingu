@@ -1,0 +1,23 @@
+class RouteNames {
+  static const splash = '/';
+  static const login = '/login';
+  static const adminLogin = '/admin-login';
+  static const register = '/register';
+  static const onboarding = '/onboarding';
+  
+  // Student routes
+  static const studentHome = '/student/home';
+  static const activityList = '/student/activities';
+  static const claimProof = '/student/claim-proof';
+  static const mySubmissions = '/student/my-submissions';
+  static const eventCamera = '/student/event-camera';
+  static const studentProfile = '/student/profile';
+  
+  // Admin routes
+  static const adminDashboard = '/admin/dashboard';
+  static const adminEvents = '/admin/events';
+  static const createEvent = '/admin/create-event';
+  static const adminSubmissions = '/admin/submissions';
+  static const adminMore = '/admin/more';
+  static const manageActivities = '/admin/manage-activities';
+}
