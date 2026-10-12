@@ -1,20 +1,24 @@
 import type { Metadata, Viewport } from "next";
-import { Fredoka, Nunito } from "next/font/google";
+import localFont from "next/font/local";
 import "../../node_modules/tw-animate-css/dist/tw-animate.css";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import ClientLayout from "@/components/ClientLayout";
 
-const display = Fredoka({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+// Self-hosted (OFL) latin variable fonts. next/font/google breaks on Vercel's
+// builders because Google serves Fredoka from a query-string URL.
+const display = localFont({
+  src: "./fonts/fredoka-latin-var.woff2",
+  weight: "500 700",
   variable: "--font-display",
+  display: "swap",
 });
 
-const body = Nunito({
-  subsets: ["latin"],
-  weight: ["500", "600", "700", "800", "900"],
+const body = localFont({
+  src: "./fonts/nunito-latin-var.woff2",
+  weight: "500 900",
   variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
