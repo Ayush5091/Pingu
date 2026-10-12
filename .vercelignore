@@ -1,0 +1,19 @@
+# The Vercel CLI uploads everything not listed here (it does not read .gitignore).
+# Secrets come from the project's Vercel environment variables, never from files.
+.env
+.env.*
+*.env
+*.pem
+*.key
+
+# Not part of the web app
+spark_flutter/
+rag/
+*.png
+!public/**
+
+# Local build output and tooling
+.next/
+node_modules/
+*.tsbuildinfo
+*.log
